@@ -1,7 +1,7 @@
 install:
 	uv sync
 
-gendiif:
+gendiff:
 	uv run gendiff
 
 build:
