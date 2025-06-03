@@ -20,3 +20,4 @@ dev = [
 ]
 
 [project.scripts]
+gendiff = 'gendiff.scripts.gendiff:main'
