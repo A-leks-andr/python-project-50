@@ -2,5 +2,5 @@ import json
 
 def read_data(path_file):
 	with open(path_file, 'r') as file:
-		strings = dict(sorted(json.load(file).items()))
+		strings = json.load(file)
 		return strings
