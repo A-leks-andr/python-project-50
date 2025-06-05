@@ -1,10 +1,12 @@
 from gendiff.gendiff_help import parse
-from gendiff.data import read_data
+from gendiff.generate import generate_diff
 
 def main():
 	args = parse()
-	print(read_data(args.first_file))
-	print(read_data(args.second_file))
+	print(
+		generate_diff(args.first_file, args.second_file)
+	)
+	
 
 
 if __name__=='__main__':
