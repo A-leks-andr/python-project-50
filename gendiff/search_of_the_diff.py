@@ -1,5 +1,6 @@
 import json
 
+
 def search_diff(value1, value2):
 	result = {}
 	all_keys = sorted(list(value1.keys() | value2.keys()))
