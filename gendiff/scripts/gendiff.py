@@ -1,6 +1,7 @@
 from gendiff.gendiff_help import parse
 from gendiff.generate import generate_diff
 
+
 def main():
 	args = parse()
 	print(
@@ -8,6 +9,5 @@ def main():
 	)
 	
 
-
-if __name__=='__main__':
+if __name__ == '__main__':
 	main()
