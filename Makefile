@@ -18,3 +18,6 @@ lint:
 
 format:
 	uv run ruff format
+
+test-coverage:
+	uv run pytest --cov=python-project-50 --cov-report xml
