@@ -28,7 +28,7 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ 831dcc300b7a8099dd1b1c8db4c6277d1e88d80b }}
         with:
           args: >
             -Dsonar.projectKey=A-leks-andr-python-project-50
