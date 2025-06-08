@@ -1,6 +1,3 @@
-import json
-
-
 def search_diff(value1, value2):
     result = {}
     all_keys = sorted(list(value1.keys() | value2.keys()))
@@ -15,4 +12,4 @@ def search_diff(value1, value2):
                 result[f"+ {key}"] = value2.get(key)
         elif key not in value1 and key in value2:
             result[f"+ {key}"] = value2.get(key)
-    return json.dumps(result, indent=4)
+    return result
