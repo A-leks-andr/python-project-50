@@ -4,7 +4,7 @@ from gendiff.data import read_data
 
 
 def get_test_data_path(filename):
-    return Path(__file__).parent / "test_data" / filename
+    return Path(__file__).parent / "tests" / filename
 
 
 def read_file(filename):
