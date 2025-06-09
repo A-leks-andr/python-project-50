@@ -11,4 +11,4 @@
 
 """
 ### Демонстрация работы программы:
-[![asciicast]https://asciinema.org/a/722649](https://asciinema.org/a/722649)
+[![asciicast](https://asciinema.org/a/722649)](https://asciinema.org/a/722649)
