@@ -23,8 +23,8 @@ def read_file(filename):
 def test_generate_diff_json():
     file1 = get_test_data_path("file_1.json")
     file2 = get_test_data_path("file_2.json")
-    expec1 = read_file("file_3.json")
-    expec2 = read_file("file_4.json")
+    expec1 = read_file("expec1.json")
+    expec2 = read_file("expec2.json")
     actual1 = generate_diff(file1, file2)
     actual2 = generate_diff(file2, file1)
     print(actual1)
@@ -37,8 +37,8 @@ def test_generate_diff_json():
 def test_generate_diff_yaml():
     file1 = get_test_data_path("file_1.yaml")
     file2 = get_test_data_path("file_2.yaml")
-    expec1 = read_file("file_3.json")
-    expec2 = read_file("file_4.json")
+    expec1 = read_file("expec1.json")
+    expec2 = read_file("expec2.json")
     actual1 = generate_diff(file1, file2)
     actual2 = generate_diff(file2, file1)
     print(actual1)
