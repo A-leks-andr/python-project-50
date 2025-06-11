@@ -46,5 +46,5 @@ def miks_dict(file1, file2):
     return diff_dict
 
 
-print(6, miks_dict('tests/test_data/file5.json', 
-                   'tests/test_data/file6.json'))
+#print(6, miks_dict('tests/test_data/file5.json', 
+#                  'tests/test_data/file6.json'))
