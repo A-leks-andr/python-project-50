@@ -23,11 +23,11 @@ def search_diff(value1, value2):
                 elif value1[k] != value2[k] and (isinstance(value1[k], dict)
                                         or isinstance(value2, dict)):
                     if f'- {k}' not in diff_dict:
-                        diff_dict[f'- {k}'] = {}
-                    diff_dict[f'- {k}'].update(inner(value1[k], value2[k]))
+                        diff_dict[f'  {k}'] = {}
+                    diff_dict[f'  {k}'].update(inner(value1[k], value2[k]))
             elif k in value1 and k not in value2:
                 if isinstance(value1[k], dict):
-                    diff_dict[f'- {k}'] = inner(value1[k], None)
+                    diff_dict[f'  {k}'] = inner(value1[k], None)
                 else:
                     diff_dict[f'- {k}'] = value1[k]
             elif k not in value1 and k in value2:
