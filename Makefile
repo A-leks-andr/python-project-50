@@ -17,7 +17,7 @@ format:
 	uv run ruff format
 
 check:
-	test lint format
+	test lint
 
 build:
 	uv build
