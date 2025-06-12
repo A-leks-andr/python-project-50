@@ -1,8 +1,23 @@
 install:
 	uv sync
 
-gendiff:
+run:
 	uv run gendiff
+
+test: 
+	uv run pytest
+
+test-coverage:
+	uv run pytest --cov=gendiff --cov-report=xml:coverage.xml
+
+lint:
+	uv run ruff check --fix
+
+format:
+	uv run ruff format
+
+check:
+	test lint format
 
 build:
 	uv build
@@ -10,20 +25,10 @@ build:
 package-install:
 	uv tool install dist/*.whl
 
-package-reinstall:
+reinstall:
 	uv tool install --force dist/*.whl
 
-lint:
-	uv run ruff check --fix
+uninstall:
+	uv tool uninstall hexlet-code
 
-test: 
-	uv run pytest
-
-format:
-	uv run ruff format
-
-test-coverage:
-	uv run pytest --cov=python-project-50 --cov-report xml
-
-check:
-	test lint
+.PHONY: install test lint selfcheck check build package-install reinstall uninstall
