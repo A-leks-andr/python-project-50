@@ -1,8 +1,10 @@
-from gendiff.data import read_data
-from gendiff.search_of_the_diff import search_diff
+from gendiff.formatters.format_identifier import format_identifier
+from gendiff.find_diff import find_diff
+from gendiff.parser import parse_data_from_file
 
 
-def generate_diff(first_file, second_file):
-    data_1 = read_data(first_file)
-    data_2 = read_data(second_file)
-    return search_diff(data_1, data_2)
+def generate_diff(file_path1, file_path2, formatter='stylish'):
+    first_file = parse_data_from_file(file_path1)
+    second_file = parse_data_from_file(file_path2)
+    diff = find_diff(first_file, second_file)
+    return format_identifier(diff, formatter)
