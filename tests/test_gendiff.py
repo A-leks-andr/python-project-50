@@ -1,6 +1,6 @@
 import pytest
-from gendiff.scripts.generate_diff import generate_diff
-from gendiff.scripts.parser import read_file
+from gendiff.generate import generate_diff
+from gendiff.parser import read_file
 
 
 @pytest.mark.parametrize(
