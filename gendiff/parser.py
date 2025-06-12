@@ -10,16 +10,16 @@ def get_file_format(file_path):
 
 
 def read_file(file_path):
-    with open(file_path, encoding='utf-8') as file:
+    with open(file_path, encoding="utf-8") as file:
         return file.read()
 
 
 def parse_data(data, format):
-    if format == 'json':
+    if format == "json":
         return json.loads(data)
-    if format == 'yaml' or format == 'yml':
+    if format == "yaml" or format == "yml":
         return yaml.safe_load(data)
-    raise ValueError(f'Unsupported file format: {format}')
+    raise ValueError(f"Unsupported file format: {format}")
 
 
 def parse_data_from_file(file_path):

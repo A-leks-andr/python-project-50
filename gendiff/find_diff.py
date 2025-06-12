@@ -1,41 +1,29 @@
 def item_add(key, value):
-    return {
-        'action': 'added',
-        'name': key,
-        'new_value': value
-    }
+    return {"action": "added", "name": key, "new_value": value}
 
 
 def item_delete(key, value):
-    return {
-        'action': 'deleted',
-        'name': key,
-        'old_value': value
-    }
+    return {"action": "deleted", "name": key, "old_value": value}
 
 
 def items_unchanged(key, value):
-    return {
-        'action': 'unchanged',
-        'name': key,
-        'value': value
-    }
+    return {"action": "unchanged", "name": key, "value": value}
 
 
 def items_modified(key, value1, value2):
     return {
-        'action': 'modified',
-        'name': key,
-        'new_value': value2,
-        'old_value': value1
+        "action": "modified",
+        "name": key,
+        "new_value": value2,
+        "old_value": value1,
     }
 
 
 def items_nested(key, value1, value2):
     return {
-        'action': 'nested',
-        'name': key,
-        'children': find_diff(value1, value2)
+        "action": "nested",
+        "name": key,
+        "children": find_diff(value1, value2),
     }
 
 
@@ -61,6 +49,6 @@ def find_diff(data1, data2):
         else:
             diff.append(items_unchanged(key, value1))
 
-    sorted_diff = sorted(diff, key=lambda x: x['name'])
+    sorted_diff = sorted(diff, key=lambda x: x["name"])
 
     return sorted_diff
