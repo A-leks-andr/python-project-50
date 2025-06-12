@@ -2,9 +2,5 @@
 dist/
 /*.cast
 __pycache__/
-file1.json
-file2.json
 .coverage
-file1.yaml
-file2.yaml
 .vscode
