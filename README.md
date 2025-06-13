@@ -12,6 +12,5 @@
 """
 ### Демонстрация работы программы:
 [![asciicast](https://asciinema.org/a/722649.svg)](https://asciinema.org/a/722649)
-
-### Демострация работы программы со вложенными словарями:
+### Демонстрация работы программы со вложенными словарями:
 [![asciicast](https://asciinema.org/a/723180.svg)](https://asciinema.org/a/723180)
